@@ -1,0 +1,545 @@
+/*
+
+*/
+
+#ifndef _REGISTER_PINS_H
+#define _REGISTER_PINS_H
+
+//HEADERS
+#include <stdint.h>
+#include <stdlib.h>
+
+//GPIO 
+// PORTB
+#define PB0 0x00
+#define PB1 0x01
+#define PB2 0x02
+#define PB3 0x03
+#define PB4 0x04
+#define PB5 0x05
+#define PB6 0x06
+#define PB7 0x07
+
+// PORTC
+#define PC0 0x00
+#define PC1 0x01
+#define PC2 0x02
+#define PC3 0x03
+#define PC4 0x04
+#define PC5 0x05
+#define PC6 0x06
+#define PC7 0x07
+
+// PORTD
+#define PD0 0x00
+#define PD1 0x01
+#define PD2 0x02
+#define PD3 0x03
+#define PD4 0x04
+#define PD5 0x05
+#define PD6 0x06
+#define PD7 0x07
+
+//REGISTERS
+// MCUCR
+#define IVCE  0x00
+#define IVSEL 0x01
+//#define     0x02
+//#define     0x03
+#define PUD   0x04
+#define BODSE 0x05
+#define BODS  0x06
+//#define     0x07
+
+// EICRA
+#define ISC00 0x00
+#define ISC01 0x01
+#define ISC10 0x02
+#define ISC11 0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// EIMSK
+#define INT0  0x00
+#define INT1  0x01
+//#define     0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// EIFR
+#define INTF0 0x00
+#define INTF1 0x01
+//#define     0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// PCICR
+#define PCIE0 0x00
+#define PCIE1 0x01
+#define PCIE2 0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// PCIFR
+#define PCIF0 0x00
+#define PCIF1 0x01
+#define PCIF2 0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// PCMSK0
+#define PCINT0 0x00
+#define PCINT1 0x01
+#define PCINT2 0x02
+#define PCINT3 0x03
+#define PCINT4 0x04
+#define PCINT5 0x05
+#define PCINT6 0x06
+#define PCINT7 0x07
+
+// PCMSK1
+#define PCINT8  0x00
+#define PCINT9  0x01
+#define PCINT10 0x02
+#define PCINT11 0x03
+#define PCINT12 0x04
+#define PCINT13 0x05
+#define PCINT14 0x06
+//#define PCINT7 0x07
+
+// PCMSK2
+#define PCINT16 0x00
+#define PCINT17 0x01
+#define PCINT18 0x02
+#define PCINT19 0x03
+#define PCINT20 0x04
+#define PCINT21 0x05
+#define PCINT22 0x06
+#define PCINT23 0x07
+
+
+// TIMERS
+// TIMER 0
+// TCCR0B
+#define CS00  0x00
+#define CS00  0x01
+#define CS00  0x02
+#define WGM02 0x03
+//#define     0x04
+//#define     0x05
+#define FOC0B 0x06
+#define FOC0A 0x07
+
+// TIMSK0
+#define TOIE0  0x00
+#define OCIE0A 0x01
+#define OCIE0B 0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// TIFR0
+#define TOV0  0x00
+#define OCF0A 0x01
+#define OCF0B 0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// TIMER 1
+// TCCR1A
+#define WGM10 0x00
+#define WGM11 0x01
+//#define 0x02
+//#define 0x03
+#define COM1B0 0x04
+#define COM1B1 0x05
+#define COM1A0 0x06
+#define COM1A1 0x07
+
+// TCCR1B
+#define CS10  0x00
+#define CS11  0x01
+#define CS12  0x02
+#define WGM12 0x03
+#define WGM13 0x04
+//#define 0x05
+#define ICES1 0x06
+#define ICNC1 0x07
+
+// TCCR1C
+#define FOC1B 0x00
+#define FOC1A 0x01
+//#define     0x02
+//#define     0x03
+//#define     0x04
+//#define     0x05
+//#define     0x06
+//#define     0x07
+
+// TIMSK1
+#define TOIE1  0x00
+#define OCIE1A 0x01
+#define OCIE1B 0x02
+//#define  0x03
+//#define     0x04
+#define ICIE1  0x05
+//#define     0x06
+//#define     0x07
+
+// TIFR1
+#define TOV1  0x00
+#define OCF1A 0x01
+#define OCF1B 0x02
+//#define 0x03
+//#define 0x04
+#define ICF1  0x05
+//#define 0x06
+//#define 0x07
+
+// GTCCR
+#define PSRSYNC 0x00
+#define PSRASY  0x01
+//#define 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+//#define 0x06
+#define TSM     0x07
+
+// TIMER 2
+// TCCR2A
+#define WGM20  0x00
+#define WGM21  0x01
+//#define 0x02
+//#define 0x03
+#define COM2B0 0x04
+#define COM2B1 0x05
+#define COM2A0 0x06
+#define COM2A1 0x07
+
+// TCBCR2
+#define CS20  0x00
+#define CS21  0x01
+#define CS22  0x02
+#define WGM22 0x03
+//#define 0x04
+//#define 0x05
+#define FOC2B 0x06
+#define FOC2A 0x07
+
+// TIMSK2
+#define TOIE2  0x00
+#define OCIE2A 0x01
+#define OCIE2B 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+//#define 0x06
+//#define 0x07
+
+// TIFR2
+#define TOV2  0x00
+#define OCF2A 0x01
+#define OCF2B 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+//#define 0x06
+//#define 0x07
+
+// ASSR
+#define TCR2BUB 0x00
+#define TCR2AUB 0x01
+#define OCR2BUB 0x02
+#define OCR2AUB 0x03
+#define TCN2UB  0x04
+#define AS2     0x05
+#define EXCLK   0x06
+//#define 0x07
+
+// PROTOCOLS
+// SPI
+// SPCR
+#define SPR0 0x00
+#define SPR1 0x01
+#define CPHA 0x02
+#define CPOL 0x03
+#define MSTR 0x04
+#define DORD 0x05
+#define SPE  0x06
+#define SPIE 0x07
+
+// SPSR
+#define SPI2X 0x00
+//#define 0x01
+//#define 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+#define WCOL 0x06
+#define SPIF 0x07
+
+// USART
+// UCSRnA
+#define MPCM 0x00
+#define U2X  0x01
+#define UPE  0x02
+#define DOR  0x03
+#define FE   0x04
+#define UDRE 0x05
+#define TXC  0x06
+#define RXC  0x07
+
+// UCSRnB
+#define TXB8  0x00
+#define RXB8  0x01
+#define UCSZ  0x02
+#define TXEN  0x03
+#define RXEN  0x04
+#define UDRIE 0x05
+#define TXCIE 0x06
+#define RXCIE 0x07
+
+// UCSRnC
+#define UCPOL   0x00
+#define UCSZn0  0x01
+#define UCSZn1  0x02
+#define USBS    0x03
+#define UPMn0   0x04
+#define UPMn1   0x05
+#define UMSELn0 0x06
+#define UMSELn1 0x07
+
+// UCSRnA
+//#define 0x00
+//#define 0x01
+//#define 0x02
+//#define 0x03
+//#define 0x04
+#define UDREn  0x05
+#define TXCn   0x06
+#define RXCn   0x07
+
+// UCSRnB
+//#define 0x00
+//#define 0x01
+//#define 0x02
+#define TXENn  0x03
+#define RXENn  0x04
+#define UDRIE  0x05
+#define TXCIEn 0x06
+#define RXCIEn 0x07
+
+// UCSRnC
+#define UCPOLn 0x00
+#define UCPHAn 0x01
+#define UDORDn 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+#define UMSELn0 0x06
+#define UMSELn1 0x07
+
+// IC2
+// TWBR
+#define TWBR0 0x00
+#define TWBR1 0x01
+#define TWBR2 0x02
+#define TWBR3 0x03
+#define TWBR4 0x04
+#define TWBR5 0x05
+#define TWBR6 0x06
+#define TWBR7 0x07
+
+// TWCR
+#define TWIE 0x00
+//#define 0x01
+#define TWEN  0x02
+#define TWWC  0x03
+#define TWSTO 0x04
+#define TWSTA 0x05
+#define TWEA  0x06
+#define TWINT 0x07
+
+// TWSR
+#define TWPS0 0x00
+#define TWPS1 0x01
+//#define 0x02
+#define TWS3 0x03
+#define TWS4 0x04
+#define TWS5 0x05
+#define TWS6 0x06
+#define TWS7 0x07
+
+// TWDR
+#define TWDR0 0x00
+#define TWDR1 0x01
+#define TWDR2 0x02
+#define TWDR3 0x03
+#define TWDR4 0x04
+#define TWDR5 0x05
+#define TWDR6 0x06
+#define TWDR7 0x07
+
+// TWAR
+#define TWGCE 0x00
+#define TWA0  0x01
+#define TWA1  0x02
+#define TWA2  0x03
+#define TWA3  0x04
+#define TWA4  0x05
+#define TWA5  0x06
+#define TWA6  0x07
+
+// ADC
+//ADCSRB
+#define ADTS0 0x00
+#define ADTS1 0x01
+#define ADTS2 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+#define ACME  0x06
+//#define 0x07
+
+// ACSR
+#define ACIS0 0x00
+#define ACIS1 0x01
+#define ACIC  0x02
+#define ACIE  0x03
+#define ACI   0x04
+#define ACO   0x05
+#define ACBG  0x06
+#define ACD   0x07
+
+// DIDR1
+#define AIN0D 0x00
+#define AIN1D 0x01
+//#define 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+//#define 0x06
+//#define 0x07
+
+// ADMUX
+#define MUX0  0x00
+#define MUX1  0x01
+#define MUX2  0x02
+#define MUX3  0x03
+//#define 0x04
+#define ADLAR 0x05
+#define REFS0 0x06
+#define REFS1 0x07
+
+// ADCSRA
+#define ADPS0 0x00
+#define ADPS1 0x01
+#define ADPS2 0x02
+#define ADIE  0x03
+#define ADIF  0x04
+#define ADATE 0x05
+#define ADSC  0x06
+#define ADEN  0x07
+
+// ADCSRB
+#define ADTS0 0x00
+#define ADTS1 0x01
+#define ADTS2 0x02
+//#define 0x03
+//#define 0x04
+//#define 0x05
+#define ACME  0x06
+//#define 0x07
+
+// DIDR0
+#define ADC0D 0x00
+#define ADC1D 0x01
+#define ADC2D 0x02
+#define ADC3D 0x03
+#define ADC4D 0x04
+#define ADC5D 0x05
+//#define 0x06
+//#define 0x07
+
+// SPMCSR
+#define SELFPRGEN 0x00
+#define PGERS     0x01
+#define PGWRT     0x02
+#define BLBSET    0x03
+#define RWWSRE    0x04
+//#define 0x05
+#define RWWSB     0x06
+#define SPMIE     0x07
+
+/*
+//
+#define 0x00
+#define 0x01
+#define 0x02
+#define 0x03
+#define 0x04
+#define 0x05
+#define 0x06
+#define 0x07
+
+//
+#define 0x00
+#define 0x01
+#define 0x02
+#define 0x03
+#define 0x04
+#define 0x05
+#define 0x06
+#define 0x07
+
+//
+#define 0x00
+#define 0x01
+#define 0x02
+#define 0x03
+#define 0x04
+#define 0x05
+#define 0x06
+#define 0x07
+
+//
+#define 0x00
+#define 0x01
+#define 0x02
+#define 0x03
+#define 0x04
+#define 0x05
+#define 0x06
+#define 0x07
+
+//
+#define 0x00
+#define 0x01
+#define 0x02
+#define 0x03
+#define 0x04
+#define 0x05
+#define 0x06
+#define 0x07
+*/
+#endif
